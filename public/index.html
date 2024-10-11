@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Node/Express API with TypeScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 80%;
+      margin: auto;
+      padding: 20px;
+      background: white;
+    }
+    h1, h2, h3 {
+      color: #333;
+    }
+    code {
+      background: #f4f4f4;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+    pre {
+      background: #333;
+      color: white;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    ul, ol {
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    .block {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Simple Node/Express API with TypeScript</h1>
+
+    <div class="block">
+      <p>This project is a simple Node.js server built with Express and TypeScript. It demonstrates how to set up an API using modern JavaScript/TypeScript and the Express framework.</p>
+    </div>
+
+    <h2>Features</h2>
+    <ul>
+      <li>TypeScript Support: Written in TypeScript for type safety.</li>
+      <li>Express Server: A minimal API server setup using Express.</li>
+      <li>Simple API Routes: Includes a sample route that greets the user.</li>
+    </ul>
+
+    <h2>Requirements</h2>
+    <ul>
+      <li><strong>Node.js</strong> (v14 or above recommended)</li>
+      <li><strong>npm</strong> (v6 or above)</li>
+    </ul>
+
+    <h2>Installation</h2>
+    <ol>
+      <li>
+        Clone the repository:
+        <pre><code>git clone https://github.com/your-username/ts-express-api.git</code></pre>
+      </li>
+      <li>
+        Navigate to the project directory:
+        <pre><code>cd ts-express-api</code></pre>
+      </li>
+      <li>
+        Install dependencies:
+        <pre><code>npm install</code></pre>
+      </li>
+    </ol>
+
+    <h2>Development Setup</h2>
+    <ol>
+      <li>
+        Start the development server:
+        <pre><code>npm start</code></pre>
+        This will run the server using <code>ts-node</code>, which allows you to run TypeScript code without needing to compile it first.
+      </li>
+      <li>
+        The server will be running at:
+        <pre><code>http://localhost:3000</code></pre>
+      </li>
+    </ol>
+
+    <h2>Build for Production</h2>
+    <p>To build the project for production (compile TypeScript to JavaScript), run:</p>
+    <pre><code>npm run build</code></pre>
+    <p>This will compile the TypeScript files and generate the output in the <code>dist</code> directory.</p>
+
+    <p>To run the compiled JavaScript files, use:</p>
+    <pre><code>npm run serve</code></pre>
+
+    <h2>API Endpoints</h2>
+    
+    <h3>1. Root Endpoint</h3>
+    <ul>
+      <li><strong>URL:</strong> <code>/</code></li>
+      <li><strong>Method:</strong> <code>GET</code></li>
+      <li><strong>Description:</strong> Returns a simple greeting message.</li>
+      <li><strong>Response:</strong></li>
+    </ul>
+    <pre><code>Hello, World!</code></pre>
+    
+    <h3>2. Greet User Endpoint</h3>
+    <ul>
+      <li><strong>URL:</strong> <code>/api/greet/:name</code></li>
+      <li><strong>Method:</strong> <code>GET</code></li>
+      <li><strong>Description:</strong> Returns a greeting message for the user.</li>
+      <li><strong>Request Parameters:</strong></li>
+      <ul>
+        <li><code>name</code>: The name of the user to greet.</li>
+      </ul>
+      <li><strong>Response:</strong></li>
+    </ul>
+    <pre><code>{
+  "message": "Hello, [name]!"
+}</code></pre>
+
+    <h2>Project Structure</h2>
+    <pre><code>ts-express-api/
+│
+├── src/                # Source files
+│   └── server.ts       # Main server file
+│
+├── dist/               # Compiled JavaScript files (created after build)
+│
+├── package.json        # npm package configuration
+├── tsconfig.json       # TypeScript configuration
+└── README.md           # Project documentation
+</code></pre>
+
+    <h2>TypeScript Configuration</h2>
+    <p>This project uses the following TypeScript options in <code>tsconfig.json</code>:</p>
+    <ul>
+      <li><strong>target:</strong> <code>ES2020</code></li>
+      <li><strong>module:</strong> <code>commonjs</code></li>
+      <li><strong>strict:</strong> <code>true</code></li>
+      <li><strong>esModuleInterop:</strong> <code>true</code></li>
+    </ul>
+
+    <h2>Scripts</h2>
+    <ul>
+      <li><code>npm start</code>: Starts the server in development mode using <code>ts-node</code>.</li>
+      <li><code>npm run build</code>: Compiles TypeScript files into JavaScript.</li>
+      <li><code>npm run serve</code>: Runs the compiled JavaScript files from the <code>dist</code> directory.</li>
+    </ul>
+
+    <h2>License</h2>
+    <p>This project is licensed under the MIT License.</p>
+  </div>
+
+</body>
+</html>
